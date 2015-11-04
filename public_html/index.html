@@ -9,33 +9,107 @@ and open the template in the editor.
         <title>Echequier</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>            
-            table{
-                border : 2px solid black;
-                table-layout: fixed;
-                height : 100px;
-                width : 100px;
+        <link rel="stylesheet" type="text/css" href="style_p3.css">
+        <script type="text/JavaScript">
+            function affiche(piece) {
+            switch (piece){
+            case "pion":
+            Message="Le pion se d&eacute;place d\'une case vers la\'avant !";
+            document.getElementById("divMessage").innerHTML=Message; 
+            break;
+            case "fou":
+            Message="Le fou se d&eacute;place selon la diagonale!";
+            document.getElementById("divMessage").innerHTML=Message; 
+            break;
+            case "cheval":
+            Message="La tour se d&eacute;place en L!";
+            document.getElementById("divMessage").innerHTML=Message;
+            break;
+            case "tour":
+            Message="La tour se d&eacute;place en ligne droite!";
+            document.getElementById("divMessage").innerHTML=Message;
+            break;
+            case "roi":
+            Message="Le roi se d&eacute;place comme il veut mais d'une seule case!";
+            document.getElementById("divMessage").innerHTML=Message;
+            break;
+            case "reine":
+            Message="La reine se d&eacute;place comme elle veut!";
+            document.getElementById("divMessage").innerHTML=Message;
+            break;
+            default :
+            alert("Impossible de d&eacute;terminer la pi&egrave;ce  !");
             }
-            td{
-                text-align:center;
-                border : 2px solid black;
-                table-layout: fixed;
-                height : 100px;
-                width : 100px;
             }
-        </style>
+        </script>
     </head>
     <body>
         <table>
-            <tr><td>Tour</td><td>Cheval</td><td>Fou</td><td>Reine</td><td>Roi</td><td>Fou</td><td>Cheval</td><td>Tour</td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            <tr><td>Tour</td><td>Cheval</td><td>Fou</td><td>Reine</td><td>Roi</td><td>Fou</td><td>Cheval</td><td>Tour</td>
-
+            <tr><td><a href="javascript:void()"onMouseOver="affiche('tour');"> <img src="tour_noir.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('cheval');"> <img src="cheval_noir.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('fou');"> <img src="fou_noir.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('reine');"> <img src="reine_noir.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('roi');"> <img src="roi_noir.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('fou');"> <img src="fou_noir.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('cheval');"> <img src="cheval_noir.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('tour');"> <img src="tour_noir.png" /></a></td>
+            <tr><td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_noir.png"" /></a></td>
+            <tr><td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+            <tr><td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+            <tr><td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+            <tr><td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+                <td id="noir"></td>
+                <td></td>
+            <tr><td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('pion');"> <img src="pion_blanc.png" /></a></td>
+            <tr><td id="noir"><a href="javascript:void()"onMouseOver="affiche('tour');"> <img src="tour_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('cheval');"> <img src="cheval_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('fou');"> <img src="fou_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('reine');"> <img src="reine_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('roi');"> <img src="roi_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('fou');"> <img src="fou_blanc.png" /></a></td>
+                <td id="noir"><a href="javascript:void()"onMouseOver="affiche('cheval');"> <img src="cheval_blanc.png" /></a></td>
+                <td><a href="javascript:void()"onMouseOver="affiche('tour');"> <img src="tour_blanc.png" /></a></td>
         </table>
+        <div id="divMessage"></div>
     </body>
 </html>

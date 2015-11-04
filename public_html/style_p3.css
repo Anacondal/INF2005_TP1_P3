@@ -1,0 +1,16 @@
+table{
+    border : 2px solid black;
+    table-layout: fixed;
+    height : 100px;
+    width : 100px;
+}
+td{
+    text-align:center;
+    border : 2px solid black;
+    table-layout: fixed;
+    height : 100px;
+    width : 100px;
+}
+#noir {
+    background-color : gray;
+}
